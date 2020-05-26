@@ -1,4 +1,4 @@
-# covid19_infoapp
+# Covid-19 InfoApp
 
 A new Flutter project.
 
