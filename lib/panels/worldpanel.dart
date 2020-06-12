@@ -24,7 +24,7 @@ class WorldWide extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               Text(
-                worldData["cases"].toString(),
+                worldData["TotalConfirmed"].toString(),
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
               Text(

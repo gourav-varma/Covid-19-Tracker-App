@@ -92,56 +92,56 @@ class _AllCountriesPageState extends State<AllCountriesPage> {
                                   offset: Offset(0, 10))
                             ]),
                         child: Row(
+                          // alignment: Alignment.center,
                           children: <Widget>[
                             Container(
-                              child: Row(
+                              width: width / 1.1,
+                              child: Stack(
+                                alignment: Alignment.center,
                                 children: <Widget>[
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 60),
-                                  ),
-                                  Text(
-                                    countryData[index]["country"],
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 40),
-                                  ),
-                                  Text(
-                                    countryData[index]['cases'].toString(),
-                                    style: TextStyle(
-                                        color: Colors.blue,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 50),
-                                  ),
-                                  Text(countryData[index]['active'].toString(),
+                                  Positioned(
+                                    left: width / 20,
+                                    child: Text(
+                                      countryData[index]["country"],
                                       style: TextStyle(
-                                          color: Colors.yellow,
-                                          fontWeight: FontWeight.bold)),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 50),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15),
+                                    ),
                                   ),
-                                  Text(
-                                      countryData[index]['recovered']
-                                          .toString(),
+                                  Positioned(
+                                    right: width / 1.9,
+                                    child: Text(
+                                      countryData[index]['cases'].toString(),
                                       style: TextStyle(
-                                          color: Colors.green,
-                                          fontWeight: FontWeight.bold)),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 50),
+                                          color: Colors.blue,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
-                                  Text(countryData[index]['deaths'].toString(),
-                                      style: TextStyle(
-                                          color: Colors.red,
-                                          fontWeight: FontWeight.bold)),
+                                  Positioned(
+                                    right: width/2.9,
+                                    child: Text(
+                                        countryData[index]['active'].toString(),
+                                        style: TextStyle(
+                                            color: Colors.yellow,
+                                            fontWeight: FontWeight.bold)),
+                                  ),
+                                  Positioned(
+                                    right: width/5.5,
+                                    child: Text(
+                                        countryData[index]['recovered']
+                                            .toString(),
+                                        style: TextStyle(
+                                            color: Colors.green,
+                                            fontWeight: FontWeight.bold)),
+                                  ),
+                                  Positioned(
+                                    right: width/40,
+                                    child: Text(
+                                        countryData[index]['deaths'].toString(),
+                                        style: TextStyle(
+                                            color: Colors.red,
+                                            fontWeight: FontWeight.bold)),
+                                  ),
                                 ],
                               ),
                             )

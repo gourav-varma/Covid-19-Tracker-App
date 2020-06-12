@@ -61,7 +61,7 @@ class _OverViewState extends State<OverView> {
       http.Response response1 = await http
           .get("https://covid-19india-api.herokuapp.com/v2.0/country_data");
       http.Response response2 =
-          await http.get("https://corona.lmao.ninja/v2/all");
+          await http.get("https://api.covid19api.com/world/total");
       http.Response response3 =
           await http.get("https://api.covidindiatracker.com/state_data.json");
       setState(() {

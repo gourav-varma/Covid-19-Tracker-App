@@ -91,55 +91,58 @@ class _AllStatesPageState extends State<AllStatesPage> {
                                   offset: Offset(0, 10))
                             ]),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          // mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
                             Container(
-                              margin: EdgeInsets.symmetric(horizontal: 2),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                              // margin: EdgeInsets.symmetric(horizontal: 2),
+                              width: width/1.1,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                // mainAxisAlignment: MainAxisAlignment.start,
                                 children: <Widget>[
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 70),
-                                  ),
-                                  Text(
-                                    stateList[index]['state'],
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 35),
-                                  ),
-                                  Text(stateList[index]['confirmed'].toString(),
+                                  Positioned(
+                                    left: width / 50,
+                                    child: Text(
+                                      stateList[index]['state'],
                                       style: TextStyle(
-                                          color: Colors.blue,
-                                          fontWeight: FontWeight.bold)),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 45),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15),
+                                    ),
                                   ),
-                                  Text(stateList[index]['active'].toString(),
-                                      style: TextStyle(
-                                          color: Color(0xffffca28),
-                                          fontWeight: FontWeight.bold)),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 45),
+                                  Positioned(
+                                    right: width / 2.1,
+                                    child: Text(
+                                        stateList[index]['confirmed']
+                                            .toString(),
+                                        style: TextStyle(
+                                            color: Colors.blue,
+                                            fontWeight: FontWeight.bold)),
                                   ),
-                                  Text(stateList[index]['recovered'].toString(),
-                                      style: TextStyle(
-                                          color: Color(0xff66bb6a),
-                                          fontWeight: FontWeight.bold)),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: width / 45),
+                                  Positioned(
+                                    right: width/3,
+                                    child: Text(
+                                        stateList[index]['active'].toString(),
+                                        style: TextStyle(
+                                            color: Color(0xffffca28),
+                                            fontWeight: FontWeight.bold)),
                                   ),
-                                  Text(stateList[index]['deaths'].toString(),
-                                      style: TextStyle(
-                                          color: Colors.red,
-                                          fontWeight: FontWeight.bold)),
+                                  Positioned(
+                                    right: width/5.8,
+                                    child: Text(
+                                        stateList[index]['recovered']
+                                            .toString(),
+                                        style: TextStyle(
+                                            color: Color(0xff66bb6a),
+                                            fontWeight: FontWeight.bold)),
+                                  ),
+                                  Positioned(
+                                    right: width/40,
+                                    child: Text(
+                                        stateList[index]['deaths'].toString(),
+                                        style: TextStyle(
+                                            color: Colors.red,
+                                            fontWeight: FontWeight.bold)),
+                                  ),
                                 ],
                               ),
                             )
