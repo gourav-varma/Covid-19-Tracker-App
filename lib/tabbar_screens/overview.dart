@@ -13,11 +13,14 @@ class OverView extends StatefulWidget {
   _OverViewState createState() => _OverViewState();
 }
 
-class _OverViewState extends State<OverView> {
+class _OverViewState extends State<OverView> with AutomaticKeepAliveClientMixin{
   List indiaList;
   Map worldData;
   Map indiaData;
   List stateList;
+
+  @override
+  bool get wantKeepAlive => true;
 
   StreamSubscription<DataConnectionStatus> listener;
   // fetchIndiaData() async {
